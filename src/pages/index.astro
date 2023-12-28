@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import DelayCalc from '../components/svelte/DelayCalc.svelte';
 ---
 
 <!doctype html>
@@ -13,37 +14,65 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to
-				build a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like
-				Tailwind, React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="all-modules">
+				<details>
+					<summary>
+						<h2>Mode / scale reference</h2>
+						<hgroup>
+							Choose a mode and/or a starting key to get notes and chords within that scale.
+						</hgroup>
+					</summary>
+					//Modes | Chords | Circle of fifths
+				</details>
+				<details>
+					<summary>
+						<h2>
+							Sub-bass compression attack minimums
+						</h2>
+						<hgroup>
+							This table provides the time it takes to complete a single sub bass cycle. It may be beneficial for applying compression or layering in the sub-bass range.
+						</hgroup>
+					</summary>
+					//Table of sub-bass compression times Sub-bass | Mixing Bass
+					//should have a ms AND samples for this!!!
+				</details>
+				<details>
+					<summary>
+						<h2>
+							Delay / pre-delay calculator
+						</h2>
+						<hgroup>
+							These timings can be useful for experimenting with delays and reverbs or manually syncing them to your tempo. 16th, 32nd, and 64th values might be useful for compression attack times for preserving or accentuating transients.
+						</hgroup>
+					</summary>
+					//Table of delay and pre-delay calculator times
+					//should have a ms AND samples for this!!!
+					<DelayCalc client:only="svelte"/>
+				</details>
+				<details>
+					<summary>
+						<h2>
+							LFO / Hertz calculator
+						</h2>
+						<hgroup>
+							These timings can be useful for experimenting with synthesizers and analog modelled gear.
+						</hgroup>
+					</summary>
+					//table of timings
+					//should have a ms AND samples for this!!!
+				</details>
+				<details>
+					<summary>
+						<h2>
+							Musical note frequencies
+						</h2>
+						<hgroup>
+							A table of musical notes and their corresponding frequencies (when A=440). This is useful for instrumentation ranges and EQing. It is generally best practice to roll off the lows between 20 and 40 Hertz.
+						</hgroup>
+					</summary>
+					//musical note frequencies!
+				</details>
+			</section>
 		</main>
 		<Footer />
 	</body>
