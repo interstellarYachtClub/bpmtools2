@@ -4,6 +4,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import DelayCalc from '../components/svelte/DelayCalc.svelte';
+import LfoHertz from '../components/svelte/LfoHertz.svelte';
+import ToDo from '../components/svelte/ToDo.svelte';
+import SubBassComp from '../components/svelte/SubBassComp.svelte';
+import NoteFreqs from '../components/svelte/NoteFreqs.svelte';
 ---
 
 <!doctype html>
@@ -22,31 +26,14 @@ import DelayCalc from '../components/svelte/DelayCalc.svelte';
 							Choose a mode and/or a starting key to get notes and chords within that scale.
 						</hgroup>
 					</summary>
-					//Modes | Chords | Circle of fifths
-				</details>
-				<details>
-					<summary>
-						<h2>
-							Sub-bass compression attack minimums
-						</h2>
-						<hgroup>
-							This table provides the time it takes to complete a single sub bass cycle. It may be beneficial for applying compression or layering in the sub-bass range.
-						</hgroup>
-					</summary>
-					//Table of sub-bass compression times Sub-bass | Mixing Bass
-					//should have a ms AND samples for this!!!
+					<a href="https://en.wikipedia.org/wiki/Mode_(music)">Modes</a> | <a href="https://en.wikipedia.org/wiki/Chord_(music)">Chords</a> | <a href="https://en.wikipedia.org/wiki/Circle_of_fifths">Circle of fifths</a>
 				</details>
 				<details>
 					<summary>
 						<h2>
 							Delay / pre-delay calculator
 						</h2>
-						<hgroup>
-							These timings can be useful for experimenting with delays and reverbs or manually syncing them to your tempo. 16th, 32nd, and 64th values might be useful for compression attack times for preserving or accentuating transients.
-						</hgroup>
 					</summary>
-					//Table of delay and pre-delay calculator times
-					//should have a ms AND samples for this!!!
 					<DelayCalc client:only="svelte"/>
 				</details>
 				<details>
@@ -54,24 +41,36 @@ import DelayCalc from '../components/svelte/DelayCalc.svelte';
 						<h2>
 							LFO / Hertz calculator
 						</h2>
-						<hgroup>
-							These timings can be useful for experimenting with synthesizers and analog modelled gear.
-						</hgroup>
 					</summary>
-					//table of timings
-					//should have a ms AND samples for this!!!
+					<LfoHertz client:only="svelte"/>
+				</details>
+				<details>
+					<summary>
+						<h2>
+							Sub-bass compression attack minimums
+						</h2>
+					</summary>
+					<SubBassComp />
 				</details>
 				<details>
 					<summary>
 						<h2>
 							Musical note frequencies
 						</h2>
-						<hgroup>
-							A table of musical notes and their corresponding frequencies (when A=440). This is useful for instrumentation ranges and EQing. It is generally best practice to roll off the lows between 20 and 40 Hertz.
-						</hgroup>
 					</summary>
-					//musical note frequencies!
+					<NoteFreqs />
 				</details>
+			<details>
+				<summary>
+					<h2>
+						To Do
+					</h2>
+					<hgroup>
+						Updates that need to be made. Short term roadmap.
+					</hgroup>
+				</summary>
+				<ToDo />
+			</details>
 			</section>
 		</main>
 		<Footer />
