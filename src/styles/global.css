@@ -153,6 +153,13 @@ hr {
 	white-space: nowrap;
 }
 
+#bpmForm {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: .5rem 0;
+}
+
 .all-modules {
 	h2 {
 		font-size: 1.5rem;
@@ -171,4 +178,87 @@ hr {
 	td img {
 		max-height: 3rem;
 	}
+	/*TEMP DETAILS MARKERS*/
+	/*details RESET */
+	details summary { 
+		cursor: pointer;
+	  }
+	  
+	  details summary > * {
+		display: inline;
+	  }
+	  summary {
+		list-style: none;
+	  }
+	/* Hide the default disclosure triangle */
+details::marker {
+	display: none !important;
+  }
+  
+  /* Add a custom disclosure triangle */
+  summary::before {
+	content: '▶';
+	width: 34px;
+	padding: .5rem;
+	border-radius: 50%;
+	background-color: #666;
+	display: inline-block;
+	justify-content: center;
+	/* Add your custom styles here */
+  }
+  
+  /* Change the triangle when the details are open */
+  details[open] > summary::before {
+	content: '▼';
+  }
+}
+
+.settings-menu {
+	display: flex;
+	flex-direction: row-reverse;
+	position: relative;
+	height: 3rem;
+	li {
+	list-style: none;
+	}
+}
+
+.settings-menu #menu-gear {
+	width: 48px;
+	height: 48px;
+	margin: 0 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	padding: .5rem;
+	z-index: 99;
+}
+.settings-menu menu {
+	position: absolute;
+}
+
+.settings-menu #menu-gear-icon {
+	height: 32px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5rem;
+}
+
+.settings-menu li img {
+	height: 24px;
+}
+
+.settings-menu li fieldset{
+	display: flex;
+	flex-direction: row;
+}
+
+.settings-menu .menu-gear + menu li{
+	display: none;
+}
+
+.settings-menu .menu-gear:checked + menu li{
+	display: block;
 }

@@ -8,12 +8,10 @@ import BpmInput from './svelte/BpmInput.svelte';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<!-- <div class="bpmform"><label for="bpminput">BPM:</label><input value="120" type="number" min="1" max="999" name="bpminput"  id="bpminput"/></div> -->
-		
-		<BpmInput client:only="svelte" />
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
 		</div>
 		
 		<!-- <div class="social-links">

@@ -36,7 +36,7 @@
         ];
         triplets = [
             {notation: '1/64t' , division: '1/64t', value: beatms / 16 * 2/3},
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Dotted_32nd_note_with_upward_stem.svg' , divison: '1/32t', value: beatms / 8 * 2/3},
+            {notation: '1/32t' , divison: '1/32t', value: beatms / 8 * 2/3},
             {notation: '1/16t' , division: '1/16t', value: beatms / 4 * 2/3},
             {notation: '1/8t' , division: '1/8t' , value: beatms / 2 * 2/3},
             {notation: '1/4t' , division: '1/4t' , value: beatms * 1 * 2/3},
