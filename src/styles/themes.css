@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+.ableish {
+    --background: #6e6e6e;
+    --interior: #878787;
+    --gray: #757575;
+    --darkgray: #4b4b4b;
+    --select-bg: #a7bbc5;
+    --select: #000;
+    --black: #000000;
+    --border: #5a5a5a;
+    --h2: #414141;
+    --text: #000;
+    --font: Arial, Helvetica, sans-serif
+    }
+
+    .frooty {
+    --background: #596267;
+    --interior: #5f686d;
+    --border: #434c51;
+    --select-bg: #2c3338;
+    --select: #ced5db;
+    --h2: #97b6cb;
+    --text: #d2d3cb;
+    --font: "PT Sans Narrow", sans-serif;
+    }
+
+    .logikal {
+      --background: #606060;
+      --interior: #858585;
+      --summary-bg: #1b1d2a;
+      --summary: #a1b3c8;
+      --text: #e7e7e8;
+      --select-bg: #393939;
+      --select: #c7c7c7;
+      --font: "Archivo", sans-serif;
+    }
+
+    .reezon {
+      --background: #959795;
+      --interior: #443f3b;
+      --summary-bg: #eeede8;
+      --summary: #6c6c6e;
+      --select-bg: #191919;
+      --select: #976120;
+      --text: #aea697;
+      --font: "Inter Tight", sans-serif;
+    }
+
+    .scythe {
+      --background: #333333;
+      --interior: #252525;
+      --summary-bg: #333333;
+      --summary: #7e7e7e;
+      --text: #9d9d9f;
+      --select-bg: #285546;
+      --select: #4eb693;
+
+
+    }
+
+main {
+    background-color: var(--background);
+    font-family: var(--font);
+}
+h2 {
+    color: var(--h2);
+}
+a {
+    color: var(--text);
+}
+
+p {
+    color: var(--text);
+}
+table {
+  color: var(--text);
+}
+main select, main input {
+    background-color: var(--select-bg);
+    font-weight: 500;
+    color: var(--select);
+}
+
+/* LOGIKAL T H E M E */
+.logikal summary {
+    background-color: var(--summary-bg);
+    color: var(--summary);
+}
+.logikal details {
+  background-color: var(--interior);
+}
+
+/* REEZON T H E M E */
+.reezon summary {
+  background-color: var(--summary-bg);
+  color: var(--summary);
+}
+.reezon details {
+background-color: var(--interior);
+}
+
+/* SCYTHE T H E M E */
+.scythe summary {
+  background-color: var(--summary-bg);
+  color: var(--summary);
+}
+.scythe details {
+background-color: var(--interior);
+}
+
+
+/*ABLEISH T H E M E */
+.ableish details {
+    border: .33rem solid var(--border);
+    border-radius: 5px;
+    padding: .25rem;
+    background-color: var(--interior);
+} 
+
+/* Hide the default disclosure triangle */
+.ableish details::marker {
+	display: none !important;
+  }
+  
+  /* Add a custom disclosure triangle */
+  .ableish summary {
+	position: relative;
+  }
+  .ableish summary::before {
+	content: '▶';
+	font-size: 2rem;
+	width: 32px;
+	height: 32px;
+	padding: .5rem .5rem .5rem .75rem;
+	border-radius: 50%;
+	background-color: #666;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* Add your custom styles here */
+  }
+  
+  /* Change the triangle when the details are open */
+  .ableish details[open] > summary::before {
+	content: '▼';
+  padding: .75rem .5rem .5rem .5rem;
+  }
+
+/*FROOTY T H E M E */
+
+  .frooty details {
+    border: .15rem solid var(--border);
+    border-radius: 5px;
+    padding: .25rem;
+    background-color: var(--interior);
+} 
+
+/* Hide the default disclosure triangle */
+.frooty details::marker {
+	display: none !important;
+  }
+  
+  /* Add a custom disclosure triangle */
+  .frooty summary {
+	position: relative;
+  }
+
+  .frooty summary::before {
+    content: '▶';
+    font-size: 2rem;
+	width: 2rem;
+	height: 2rem;
+	padding: .5rem;
+	border-radius: 50%;
+    background-color: #3b4348;
+  }
+  /* Change the triangle when the details are open */
+  .frooty details[open] > summary::before {
+	content: '▶';
+    color: #ffc87a;
+  }

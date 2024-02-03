@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { modeGlobal } from '../components/svelte/store.js';
 import BpmSettings from '../components/svelte/BpmSettings.svelte';
 import BpmInput from '../components/svelte/BpmInput.svelte';
 import ModeReference from '../components/svelte/ModeReference.svelte';
@@ -17,7 +18,9 @@ import ToDo from '../components/svelte/ToDo.svelte';
 <!doctype html>
 <html lang="en">
 	<head>
+		<!--
 		<script async src="https://us.umami.is/script.js" data-website-id="65e7053a-c193-407d-9edf-252602027eb6"></script>
+		 -->
 		<BaseHead title='BPM Tools' description={SITE_DESCRIPTION} />
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
@@ -27,11 +30,12 @@ import ToDo from '../components/svelte/ToDo.svelte';
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 	</head>
-	<body class="style-ableish">
+	<body class="web">
 		<Header title={SITE_TITLE} />
 		<BpmInput client:only="svelte" />
 		<BpmSettings client:only="svelte"/>
 		<main>
+			<div class="main-container">
 			<section class="all-modules">
 				<details>
 					<summary>
@@ -90,7 +94,9 @@ import ToDo from '../components/svelte/ToDo.svelte';
 				<MsSampleConvert client:only="svelte"/>
 			</details>
 			</section>
+		</div>
 		</main>
 		<Footer />
+		
 	</body>
 </html>

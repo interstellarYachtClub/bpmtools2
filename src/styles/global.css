@@ -42,7 +42,7 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
-main {
+main div.main-container {
 	width: 720px;
 	max-width: calc(100% - 2em);
 	margin: auto;
@@ -130,7 +130,7 @@ hr {
 	body {
 		font-size: 18px;
 	}
-	main {
+	main div.main-container {
 		padding: 1em;
 	}
 }
@@ -190,27 +190,22 @@ hr {
 	  summary {
 		list-style: none;
 	  }
-	/* Hide the default disclosure triangle */
-details::marker {
-	display: none !important;
-  }
-  
-  /* Add a custom disclosure triangle */
-  summary::before {
-	content: '▶';
-	width: 34px;
-	padding: .5rem;
-	border-radius: 50%;
-	background-color: #666;
-	display: inline-block;
-	justify-content: center;
-	/* Add your custom styles here */
-  }
-  
-  /* Change the triangle when the details are open */
-  details[open] > summary::before {
-	content: '▼';
-  }
+}
+
+.mode-reference-table tr{
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.mode-reference-table td {
+	text-align: center;
+}
+
+.mode-reference-table td:first-child {
+	text-align: start;
+}
+
+.mode-reference-table td:nth-child(even) {
+	background-color: lightgrey;
 }
 
 .settings-menu {

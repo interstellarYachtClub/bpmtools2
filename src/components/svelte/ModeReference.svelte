@@ -1,30 +1,21 @@
 <script>
-    /*
-    import { bpmGlobal } from './store.js';
-
-    let bpm; // Local variable for binding
-
-    // Subscribe to the store and update bpm when the store's value changes
-    bpmGlobal.subscribe(value => {
-        bpm = value;
-    });
-
-    // Update the store whenever bpm changes
-    $: bpmGlobal.set(bpm);
-
-    export const modeGlobal = writable('minor'); //default scale
-    export const rootGlobal = writable('C'); //default root note
-    */
 
     import { modeGlobal, rootGlobal } from './store.js';
     let mode;
+    let selectedModeName = 'aeolian';
+
     let root;
+    let selectedRootName = 'c';
+
     modeGlobal.subscribe(value => {
         mode = value;
     });
     rootGlobal.subscribe(value => {
         root = value;
     });
+
+    // Update the store whenever mode changes
+    //$: modeGlobal.set(mode);
     
     const MODES = [
     {
@@ -72,62 +63,62 @@
 ];
     const ROOTNOTES = [
     {
-        name: '0',
+        name: 'c',
         label: 'C',
         value: 0
     },
     {
-        name: '1',
+        name: 'c#',
         label: 'C# / Db',
         value: 1
     },
     {
-        name: '2',
+        name: 'd',
         label: 'D',
         value: 2
     },
     {
-        name: '3',
+        name: 'd#',
         label: 'D# / Eb',
         value: 3
     },
     {
-        name: '4',
+        name: 'e',
         label: 'E',
         value: 4
     },
     {
-        name: '5',
+        name: 'f',
         label: 'F',
         value: 5
     },
     {
-        name: '6',
+        name: 'f#',
         label: 'F# / Gb',
         value: 6
     },
     {
-        name: '7',
+        name: 'g',
         label: 'G',
         value: 7
     },
     {
-        name: '8',
+        name: 'g#',
         label: 'G# / Ab',
         value: 8
     },
     {
-        name: '9',
+        name: 'a',
         label: 'A',
         value: 9
     },
     {
-        name: '10',
+        name: 'a#',
         label: 'A# / Bb',
         value: 10
     },
     {
-        name: '11',
+        name: 'b',
         label: 'B',
         value: 11
     }
@@ -235,18 +226,48 @@ const TWOOCTAVES = [
     }
 ]
 
+function handleChangeMode() {
+    let selectedMode = selectedModeName;
+    mode = MODES.find(mode => mode.name === selectedMode);
+    modeGlobal.set(mode);
+    console.log($modeGlobal);
+}
+
+function handleChangeRoot() {
+    let selectedRoot = selectedRootName;
+    root = ROOTNOTES.find(root => root.name === selectedRoot);
+    rootGlobal.set(root);
+    console.log($rootGlobal);
+}
+
 </script>
 
-<select bind:value={mode}>
+<select bind:value={selectedModeName} on:change={handleChangeMode}>
     {#each MODES as mode (mode.name)}
         <option value={mode.name}>{mode.label}</option>
     {/each}
 </select>
 
-<select bind:value={root}>
+<select bind:value={selectedRootName} on:change={handleChangeRoot}>
     {#each ROOTNOTES as root (root.name)}
-        <option value={root.value}>{root.label}</option>
+        <option value={root.name}>{root.label}</option>
     {/each}
 </select>
 
 <p>Choose a mode and/or a starting key to get notes and chords within that scale.</p>
+
+<table class="mode-reference-table">
+     <tr>
+        <td>Chord Notation:</td>
+        {#each $modeGlobal.notation as notation (notation)}
+        <td>{notation}</td>
+        {/each}
+    </tr>
+        
+    <tr>
+        <td>Chord Root Note:</td>
+        {#each $modeGlobal.steps as step (step)}
+        <td>{TWOOCTAVES[step+$rootGlobal.value].label}</td>
+        {/each}
+        </tr>
+</table>

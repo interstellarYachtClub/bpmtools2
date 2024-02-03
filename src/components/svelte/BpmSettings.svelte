@@ -1,21 +1,27 @@
 <script>
-//import { useSamples, themeSelect } from './store.js';
+import { useSamples, themeSelect } from './store.js';
 
     let selectedTheme;
     let selectedState;
   
-    const themes = ['ableish', 'frooty', 'logikal', 'reazoned', 'scythe'];
+    //make themes available as classnames for the body
+    const themes = ['web', 'ableish', 'frooty', 'logikal', 'reezon', 'scythe'];    
+    
     const states = ['ms', 'samples'];
-  
-    function handleThemeChange(event) {
-      selectedTheme = event.target.value;
-      // handle theme change
-    }
-  
-    function handleStateChange(event) {
-      selectedState = event.target.value;
-      // handle state change
-    }
+
+  function handleThemeChange(event) {
+    selectedTheme = event.target.value;
+    themeSelect.set(selectedTheme);
+    // Apply the selected theme as a class to the body element
+    document.body.className = selectedTheme;
+    console.log(document.body.className);
+    console.log(selectedTheme);
+  }
+
+  function handleStateChange(event) {
+    selectedState = event.target.value;
+    // handle state change
+  }
   </script>
   
   <div class="settings-menu">
