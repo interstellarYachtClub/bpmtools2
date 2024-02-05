@@ -267,7 +267,7 @@ function handleChangeRoot() {
     <tr>
         <td>Chord Root Note:</td>
         {#each $modeGlobal.steps as step (step)}
-        <td>{TWOOCTAVES[step+$rootGlobal.value].label}</td>
+        <td>{TWOOCTAVES[step+$rootGlobal.value-1].label}</td>
         {/each}
         </tr>
 </table>
