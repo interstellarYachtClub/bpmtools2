@@ -256,6 +256,25 @@ function handleChangeRoot() {
 
 <p>Choose a mode and/or a starting key to get notes and chords within that scale.</p>
 
+<div style="height:19vh;">
+    <svg xml:space="preserve" width="100%" height="100%">
+        <!--  whitekeys  -->
+        <rect id="proll0" style="fill:white;stroke:black" x="0" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll2" style="fill:white;stroke:black" x="14.2857142857%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll4" style="fill:white;stroke:black" x="28.5714285714%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll5" style="fill:white;stroke:black" x="42.8571428571%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll7" style="fill:white;stroke:black" x="57.1428571428%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll9" style="fill:white;stroke:black" x="71.4285714285%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll11" style="fill:white;stroke:black" x="85.7142857142%" y="0" width="14.2857142857%" height="100%"/>
+        <!-- blackkeys -->
+        <rect id="proll1" style="fill:black;stroke:black" x="8.9026915113%" y="0" width="8.3333333333%" height="66.6666%"/>
+        <rect id="proll3" style="fill:black;stroke:black" x="25.8799171841%" y="0" width="8.3333333333%" height="66.6666%"/>
+        <rect id="proll6" style="fill:black;stroke:black" x="51.0869565216%" y="0" width="8.3333333333%" height="66.6666%"/>
+        <rect id="proll8" style="fill:black;stroke:black" x="67.2360248446%" y="0" width="8.3333333333%" height="66.6666%"/>
+        <rect id="proll10" style="fill:black;stroke:black" x="83.6956521738%" y="0" width="8.3333333333%" height="66.6666%"/>
+        </svg>
+</div>
+
 <table class="mode-reference-table">
      <tr>
         <td>Chord Notation:</td>
