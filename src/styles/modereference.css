@@ -1,0 +1,22 @@
+/* .mode-reference-table tr{
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-size: 1rem;
+} */
+
+ h3.mode-reference-table-label {
+    text-align: center;
+    margin: 0 0 1rem;
+}
+.mode-reference-table tr {
+    width: 100%;
+}
+
+.mode-reference-table td {
+	text-align: center;
+    width: 14.2857142857%;
+}
+
+.mode-reference-table td:nth-child(even) {
+	background-color: lightgrey;
+}

@@ -7,6 +7,7 @@
  @import './settings.css';
  @import './bpminput.css';
  @import './pianoroll.css';
+ @import './modereference.css';
  @import './smallscreens.css';
 :root {
 	--accent: #2337ff;
@@ -161,6 +162,9 @@ hr {
 	h2 {
 		font-size: 1.5rem;
 	}
+	h3 {
+		font-size: 1.1rem;
+	}
 	details {
 		margin: 0rem 0rem 2rem;
 	}
@@ -187,20 +191,10 @@ hr {
 	  summary {
 		list-style: none;
 	  }
-}
-
-.mode-reference-table tr{
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-.mode-reference-table td {
-	text-align: center;
-}
-
-.mode-reference-table td:first-child {
-	text-align: start;
-}
-
-.mode-reference-table td:nth-child(even) {
-	background-color: lightgrey;
+	  details span {
+		width: 100%;
+		padding: 1rem;
+		display: inline-block;
+		text-align: center;
+	  }
 }

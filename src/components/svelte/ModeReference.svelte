@@ -275,15 +275,14 @@ function handleChangeRoot() {
         </svg>
 </div>
 
+<h3 class="mode-reference-table-label">Chord Root Note & Chord Notation</h3>
 <table class="mode-reference-table">
     <tr>
-        <td>Chord Root Note:</td>
         {#each $modeGlobal.steps as step (step)}
         <td>{TWOOCTAVES[step+$rootGlobal.value-1].label}</td>
         {/each}
         </tr>
      <tr>
-        <td>Chord Notation:</td>
         {#each $modeGlobal.notation as notation (notation)}
         <td>{notation}</td>
         {/each}
