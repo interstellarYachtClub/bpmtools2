@@ -51,7 +51,7 @@ import { useSamples, themeSelect } from './store.js';
           <label for="unitsSamples">samples</label>
         </div>
       </fieldset>
-      <p style="color: red;">This feature is not functional yet.</p>
+      <p style="color: red;">Timing units WIP</p>
   </li>
   <menu>
 

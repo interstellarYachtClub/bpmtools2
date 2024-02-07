@@ -4,6 +4,10 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+ @import './settings.css';
+ @import './bpminput.css';
+ @import './pianoroll.css';
+ @import './smallscreens.css';
 :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
@@ -153,13 +157,6 @@ hr {
 	white-space: nowrap;
 }
 
-#bpmForm {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: .5rem 0;
-}
-
 .all-modules {
 	h2 {
 		font-size: 1.5rem;
@@ -206,54 +203,4 @@ hr {
 
 .mode-reference-table td:nth-child(even) {
 	background-color: lightgrey;
-}
-
-.settings-menu {
-	display: flex;
-	flex-direction: row-reverse;
-	position: relative;
-	height: 3rem;
-	li {
-	list-style: none;
-	}
-}
-
-.settings-menu #menu-gear {
-	width: 48px;
-	height: 48px;
-	margin: 0 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	opacity: 0;
-	padding: .5rem;
-	z-index: 99;
-}
-.settings-menu menu {
-	position: absolute;
-}
-
-.settings-menu #menu-gear-icon {
-	height: 32px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: .5rem;
-}
-
-.settings-menu li img {
-	height: 24px;
-}
-
-.settings-menu li fieldset{
-	display: flex;
-	flex-direction: row;
-}
-
-.settings-menu .menu-gear + menu li{
-	display: none;
-}
-
-.settings-menu .menu-gear:checked + menu li{
-	display: block;
 }

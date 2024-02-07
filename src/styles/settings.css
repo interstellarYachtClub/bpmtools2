@@ -1,0 +1,150 @@
+/* Gear Position*/
+.settings-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    height: 1rem;
+    li {
+    list-style: none;
+    }
+}
+
+.settings-menu #menu-gear {
+    width: 48px;
+    height: 48px;
+    margin: 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    padding: .5rem;
+    z-index: 99;
+}
+/* Gear Dropdown Layout*/
+.settings-menu #menu-gear-icon {
+    height: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5rem;
+}
+
+.settings-menu li img {
+    height: 24px;
+}
+
+.settings-menu li fieldset{
+    display: flex;
+    flex-direction: row;
+}
+
+.settings-menu .menu-gear + menu {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+
+/* Gear Hide/Show */
+.settings-menu .menu-gear + menu li{
+    display: none;
+}
+
+.settings-menu .menu-gear:checked + menu li{
+    display: block;
+}
+
+.settings-menu:has(.menu-gear:checked)  {
+    height: 10rem;
+    background-color: white;
+}
+
+.settings-menu:has(.menu-gear:checked) #menu-gear  {
+    width: 48px;
+    height: 48px;
+    margin: 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    padding: .5rem;
+    z-index: 99;
+}
+
+@media screen and (max-width: 480px){
+    .settings-menu {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+        height: 3rem;
+        li {
+        list-style: none;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .settings-menu {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+        height: 3rem;
+        li {
+        list-style: none;
+        }
+    }
+    
+    .settings-menu #menu-gear {
+        width: 48px;
+        height: 48px;
+        margin: 0 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        padding: .5rem;
+        z-index: 99;
+    }
+    
+    .settings-menu menu {
+        position: absolute;
+    }
+
+    .settings-menu .menu-gear + menu {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+    }
+    
+    .settings-menu #menu-gear-icon {
+        height: 32px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: .5rem;
+    }
+    
+    .settings-menu li img {
+        height: 24px;
+    }
+    
+    .settings-menu li fieldset{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .settings-menu .menu-gear + menu li{
+        display: none;
+    }
+    
+    .settings-menu .menu-gear:checked + menu li{
+        display: block;
+    }
+
+    .settings-menu:has(.menu-gear:checked)  {
+        height: 3rem;
+        background-color: rgba(255,255,255, 0)
+    }
+}
+

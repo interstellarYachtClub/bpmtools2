@@ -1,0 +1,12 @@
+@media screen and (max-width: 400px){
+    header h2 a{
+        padding: .5rem 0 !important;
+    }
+    header div a{
+        padding: .5rem 0;
+    }
+    header nav{
+        display: flex;
+        flex-direction: column;
+    }
+}

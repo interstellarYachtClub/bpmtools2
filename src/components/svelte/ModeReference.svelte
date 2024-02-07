@@ -241,7 +241,7 @@ function handleChangeRoot() {
 }
 
 </script>
-
+<p>Choose a mode and/or a starting key to get notes and chords within that scale.</p>
 <select bind:value={selectedModeName} on:change={handleChangeMode}>
     {#each MODES as mode (mode.name)}
         <option value={mode.name}>{mode.label}</option>
@@ -254,9 +254,9 @@ function handleChangeRoot() {
     {/each}
 </select>
 
-<p>Choose a mode and/or a starting key to get notes and chords within that scale.</p>
 
-<div style="height:19vh;">
+
+<div class="piano-roll-svg" style="height:19vh;">
     <svg xml:space="preserve" width="100%" height="100%">
         <!--  whitekeys  -->
         <rect id="proll0" style="fill:white;stroke:black" x="0" y="0" width="14.2857142857%" height="100%"/>
@@ -276,6 +276,12 @@ function handleChangeRoot() {
 </div>
 
 <table class="mode-reference-table">
+    <tr>
+        <td>Chord Root Note:</td>
+        {#each $modeGlobal.steps as step (step)}
+        <td>{TWOOCTAVES[step+$rootGlobal.value-1].label}</td>
+        {/each}
+        </tr>
      <tr>
         <td>Chord Notation:</td>
         {#each $modeGlobal.notation as notation (notation)}
@@ -283,10 +289,5 @@ function handleChangeRoot() {
         {/each}
     </tr>
         
-    <tr>
-        <td>Chord Root Note:</td>
-        {#each $modeGlobal.steps as step (step)}
-        <td>{TWOOCTAVES[step+$rootGlobal.value-1].label}</td>
-        {/each}
-        </tr>
+    
 </table>

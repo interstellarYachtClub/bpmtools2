@@ -18,8 +18,9 @@ import ToDo from '../components/svelte/ToDo.svelte';
 <!doctype html>
 <html lang="en">
 	<head>
+		
 		<script async src="https://us.umami.is/script.js" data-website-id="65e7053a-c193-407d-9edf-252602027eb6"></script>
-		 
+		
 		<BaseHead title='BPM Tools' description={SITE_DESCRIPTION} />
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
@@ -31,8 +32,8 @@ import ToDo from '../components/svelte/ToDo.svelte';
 	</head>
 	<body class="web">
 		<Header title={SITE_TITLE} />
-		<BpmInput client:only="svelte" />
 		<BpmSettings client:only="svelte"/>
+		<BpmInput client:only="svelte" />
 		<main>
 			<div class="main-container">
 			<section class="all-modules">
