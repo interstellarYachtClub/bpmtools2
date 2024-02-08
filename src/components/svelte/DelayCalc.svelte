@@ -58,63 +58,87 @@
 </script>
 
 <section class="delay-calculations">
-<table>
-    <thead>
-            <th>Grid</th>
-    </thead>
-    <tbody>
-        <tr>
-            {#each grids as grid}
-            <td><img src={grid.notation}/></td>
-            {/each}
-        </tr>
-        <tr>
-            {#each grids as grid}
-            <td>{grid.division}</td>
-            {/each}
-        </tr>
-        <tr>
-            {#each grids as grid}
-            <td>{formatValue(grid.value)}</td>
-            {/each}
-        </tr>
-    </tbody>
-</table>
-<table>
-    <thead>
-            <th>Dotted</th>
-    </thead>
-    <tbody>
-        <tr>
-            {#each dotted as dot}
-            <td><img src={dot.notation}/></td>
-            {/each}
-        </tr>
-        <tr>
-            {#each dotted as dot}
-            <td>{formatValue(dot.value)}</td>
-            {/each}
-        </tr>
-    </tbody>
-</table>
-<table>
-    <thead>
-            <th>Triplet</th>
-    </thead>
-    <tbody>
-        <tr>
-            {#each triplets as triplet}
-            <td><img src={triplet.notation}/></td>
-            {/each}
-        </tr>
-        <tr>
-            {#each triplets as triplet}
-            <td>{formatValue(triplet.value)}</td>
-            {/each}
-        </tr>
-    </tbody>
-</table>
-<p>
+    <details>
+        <summary>
+            <h3>Grid</h3>
+        </summary>
+        <div class="grid-container">
+            <ul>
+                {#each grids as grid}
+                <li>
+                    <div>
+                        <img src={grid.notation}/>
+                    </div>
+                    <div>
+                        {grid.division}
+                    </div>
+                    <div>
+                        {formatValue(grid.value)}
+                    </div>
+    
+                </li>
+                {/each}
+            </ul>
+        </div>
+    </details>
+    <details>
+        <summary>
+            <h3>Dotted</h3>
+        </summary>
+        <div class="grid-container">
+            <ul>
+                {#each dotted as dot}
+                <li>
+                    <div>
+                        <img src={dot.notation}/>
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div>
+                        {formatValue(dot.value)}
+                    </div>
+    
+                </li>
+                {/each}
+            </ul>
+        </div>
+    </details>
+
+    <details>
+        <summary>
+            <h3>Triplet</h3>
+        </summary>
+        <div class="grid-container">
+            <ul>
+                {#each triplets as triplet}
+                <li>
+                    <div>
+                        <img src={triplet.notation}/>
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div>
+                        {formatValue(triplet.value)}
+                    </div>
+    
+                </li>
+                {/each}
+            </ul>
+        </div>
+    </details>
+
+    
+    
+
+    
+    
+
+    
+    
+
+    <p>
     These timings can be useful for experimenting with delays and reverbs or manually syncing them to your tempo. 16th, 32nd, and 64th values might be useful for compression attack times for preserving or accentuating transients.
     </p>
 </section>

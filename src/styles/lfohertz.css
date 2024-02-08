@@ -1,0 +1,24 @@
+.lfo-calculations .grid-container ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px; /* optional: adds some space between grid items */
+    list-style: none;
+    padding: 0;
+
+}
+
+.lfo-calculations .grid-container ul li {
+    display: flex;
+    flex-direction: column;
+    max-height: 8rem;
+    padding: 1rem;
+}
+
+.lfo-calculations .grid-container img {
+    max-height: 4rem;
+}
+
+.lfo-calculations .grid-container {
+    margin: 1rem 0;
+}

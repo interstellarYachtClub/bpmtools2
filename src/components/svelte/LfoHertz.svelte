@@ -27,28 +27,28 @@
 </script>
 
 <section class="lfo-calculations">
-    <table>
-        <thead>
-                <th colspan="9">LFO & Note Durations</th>
-        </thead>
-        <tbody>
-            <tr>
-                {#each lfos as lfo}
-                <td><img src={lfo.notation}/></td>
-                {/each}
-            </tr>
-            <tr>
-                {#each lfos as lfo}
-                <td>{lfo.division}</td>
-                {/each}
-            </tr>
-            <tr>
-                {#each lfos as lfo}
-                <td>{(Math.ceil(lfo.value * 1000) / 1000).toFixed(3)}Hz</td>
-                {/each}
-            </tr>
-        </tbody>
-    </table>
+
+                <h3>LFO & Note Durations</h3>
+        
+
+    <div class="grid-container">
+        <ul>
+            {#each lfos as lfo}
+            <li>
+                <div>
+                    <img src={lfo.notation}/>
+                </div>
+                <div>
+                    {lfo.division}
+                </div>
+                <div>
+                    {(Math.ceil(lfo.value * 1000) / 1000).toFixed(3)}Hz
+                </div>
+
+            </li>
+            {/each}
+        </ul>
+    </div>
     <p>These timings can be useful for experimenting with synthesizers and analog modelled gear.</p>
 
 </section>

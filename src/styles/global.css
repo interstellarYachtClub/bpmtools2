@@ -8,6 +8,8 @@
  @import './bpminput.css';
  @import './pianoroll.css';
  @import './modereference.css';
+ @import './delaycalc.css';
+ @import './lfohertz.css';
  @import './smallscreens.css';
 :root {
 	--accent: #2337ff;
@@ -172,7 +174,6 @@ hr {
 	.subbass-compression table tr:nth-child(even) {
 		background-color: lightgrey;
 	}
-	.delay-calculations table td:nth-child(even),
 	.lfo-calculations  table td:nth-child(even){
 		background-color: lightgrey;
 	}
