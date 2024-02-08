@@ -1,3 +1,25 @@
 .piano-roll-svg {
 	padding: 1.5rem 0 1.5rem;
 }
+
+.piano-roll-svg svg rect.white-key{
+	fill:white;
+	stroke:black;
+	stroke-width: 1px;
+}
+
+.piano-roll-svg svg rect.black-key{
+	fill:black;
+	stroke:white;
+	stroke-width: 1px;
+}
+
+.piano-roll-svg svg rect.piano-roll-root-note{
+	stroke:red;
+	stroke-width: 4px;
+}
+
+.piano-roll-svg svg rect.piano-roll-highlight {
+	fill: rgba(255, 0 , 0, .5);
+}
+
