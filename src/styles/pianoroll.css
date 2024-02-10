@@ -32,3 +32,39 @@
 	fill: rgba(35,55,255,1);
 }
 
+.pianoroll-legend {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 4rem;
+	margin: 0 0 1rem;
+	font-size: .75rem;
+	text-align: center;
+	justify-content: center;
+}
+
+.pianoroll-legend div {
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pianoroll-legend div span {
+	width: .25rem !important;
+	height: .25rem !important;
+	border: 1px solid black;
+	display: inline-block;
+}
+
+.pianoroll-legend .piano-legend-root-note {
+	border: 2px solid rgba(35,55,255,1);
+}
+
+.pianoroll-legend .piano-legend-in-key {
+	border-bottom: 2px solid rgba(35,55,255,1);
+}
+
+.pianoroll-legend .piano-legend-chord {
+	background-color: rgba(35,55,255,1);
+}

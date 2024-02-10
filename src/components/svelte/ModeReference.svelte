@@ -363,4 +363,20 @@ function getChordType(notationchars) {
         {/each}
     </ul>
 </div>
+<!--
 <h3 class="mode-reference-table-label">Chord Root Note & Chord Notation</h3>
+-->
+<div class="pianoroll-legend">
+    <div>
+        <span class="piano-legend-root-note"></span>
+        Root Note
+    </div>
+    <div>
+        <span class="piano-legend-in-key"></span>
+        In Key
+    </div>
+    <div>
+        <span class="piano-legend-chord"></span>
+        Chord
+    </div>
+</div>
