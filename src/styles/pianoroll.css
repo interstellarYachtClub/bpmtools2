@@ -9,17 +9,26 @@
 }
 
 .piano-roll-svg svg rect.black-key{
-	fill:black;
-	stroke:white;
-	stroke-width: 1px;
+	fill: rgba(0,0,0,1);
+	/*stroke:black;
+	stroke-width: 1px;*/
 }
 
 .piano-roll-svg svg rect.piano-roll-root-note{
-	stroke:red;
+	stroke:rgba(35,55,255,1);
 	stroke-width: 4px;
 }
+/*
+.piano-roll-svg svg rect.piano-roll-in-key{
+	stroke:rgba(255,0,0,.45);
+	stroke-width: 2px;
+}
+
+.piano-roll-svg svg rect.piano-roll-not-in-key{
+	fill: rgba(0, 0, 0, .1);
+} */
 
 .piano-roll-svg svg rect.piano-roll-highlight {
-	fill: rgba(255, 0 , 0, .5);
+	fill: rgba(35,55,255,1);
 }
 

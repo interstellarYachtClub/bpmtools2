@@ -333,18 +333,18 @@ function getChordType(notationchars) {
     <svg xml:space="preserve" width="100%" height="100%">
         <!--  whitekeys  -->
         <rect id="proll0" class="white-key piano-roll-root-note" x="0" y="0" width="14.2857142857%" height="100%"/>
-        <rect id="proll2" class="white-key" x="14.2857142857%" y="0" width="14.2857142857%" height="100%"/>
-        <rect id="proll4" class="white-key" x="28.5714285714%" y="0" width="14.2857142857%" height="100%"/>
-        <rect id="proll5" class="white-key" x="42.8571428571%" y="0" width="14.2857142857%" height="100%"/>
-        <rect id="proll7" class="white-key" x="57.1428571428%" y="0" width="14.2857142857%" height="100%"/>
-        <rect id="proll9" class="white-key" x="71.4285714285%" y="0" width="14.2857142857%" height="100%"/>
-        <rect id="proll11" class="white-key" x="85.7142857142%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll2" class="white-key piano-roll-in-key" x="14.2857142857%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll4" class="white-key piano-roll-not-in-key" x="28.5714285714%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll5" class="white-key piano-roll-in-key" x="42.8571428571%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll7" class="white-key piano-roll-in-key" x="57.1428571428%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll9" class="white-key piano-roll-not-in-key" x="71.4285714285%" y="0" width="14.2857142857%" height="100%"/>
+        <rect id="proll11" class="white-key piano-roll-not-in-key" x="85.7142857142%" y="0" width="14.2857142857%" height="100%"/>
         <!-- blackkeys -->
-        <rect id="proll1" class="black-key" x="8.9026915113%" y="0" width="8.3333333333%" height="66.6666%"/>
-        <rect id="proll3" class="black-key" x="25.8799171841%" y="0" width="8.3333333333%" height="66.6666%"/>
-        <rect id="proll6" class="black-key" x="51.0869565216%" y="0" width="8.3333333333%" height="66.6666%"/>
-        <rect id="proll8" class="black-key" x="67.2360248446%" y="0" width="8.3333333333%" height="66.6666%"/>
-        <rect id="proll10" class="black-key" x="83.6956521738%" y="0" width="8.3333333333%" height="66.6666%"/>
+        <rect id="proll1" class="black-key piano-roll-not-in-key" x="8.9026915113%" y="0" width="8.3333333333%" height="66.6666%"/>
+        <rect id="proll3" class="black-key piano-roll-in-key" x="25.8799171841%" y="0" width="8.3333333333%" height="66.6666%"/>
+        <rect id="proll6" class="black-key piano-roll-not-in-key" x="51.0869565216%" y="0" width="8.3333333333%" height="66.6666%"/>
+        <rect id="proll8" class="black-key piano-roll-in-key" x="67.2360248446%" y="0" width="8.3333333333%" height="66.6666%"/>
+        <rect id="proll10" class="black-key piano-roll-in-key" x="83.6956521738%" y="0" width="8.3333333333%" height="66.6666%"/>
         </svg>
 </div>
 

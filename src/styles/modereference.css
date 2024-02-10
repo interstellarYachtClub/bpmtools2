@@ -7,6 +7,7 @@
  h3.mode-reference-table-label {
     text-align: center;
     margin: 0 0 1rem;
+    padding: 1rem 0;
 }
 
 .mode-reference-table ul {
@@ -21,8 +22,12 @@
 .mode-reference-table li {
 	text-align: center;
     width: 14.2857142857%;
+    margin: .25rem;
+    background-color: rgba(35,55,255,1);
+    color: white;
 }
-
+/*
 .mode-reference-table li:nth-child(even) {
-	background-color: lightgrey;
+	border: 1px solid black;
 }
+*/
