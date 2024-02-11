@@ -1,5 +1,6 @@
 <script>
     import { bpmGlobal } from './store.js';
+    //import { gridsData , dottedData , tripletsData } from './delayData.js';
 
     let bpm;
     let beatms;
@@ -13,15 +14,15 @@
         bpm = value;
         beatms = 60000 / bpm;
         grids = [
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/64th_note.svg', division: '1/64', value: beatms / 16},
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/32nd_note.svg', division: '1/32', value: beatms / 8},
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Sixteenth_note_with_upwards_stem.svg', division: '1/16', value: beatms / 4},
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/0/07/8thNote.svg', division: '1/8', value: beatms / 2 }, 
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Figure_rythmique_noire_hampe_haut.svg', division: '1/4', value: beatms },
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/0/09/Half_note_with_upwards_stem.svg', division: '1/2', value: beatms * 2 },
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Whole_note.svg', division: '1/1', value: beatms * 4 },
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Breve_note_on_stave.svg', division: '2/1', value: beatms * 8 },
-            {notation: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/White_mensural_longa.svg', division: '4/1', value: beatms * 16 },
+            {notation: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Sixtyfourth-note.svg', division: '1/64', value: beatms / 16},
+            {notation: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Music-thirtysecondnote.svg', division: '1/32', value: beatms / 8},
+            {notation: 'https://upload.wikimedia.org/wikipedia/commons/5/57/Music-sixteenthnote.svg', division: '1/16', value: beatms / 4},
+            {notation: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/Music-eighthnote.svg', division: '1/8', value: beatms / 2 }, 
+            {notation: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Music-quarternote.svg', division: '1/4', value: beatms },
+            {notation: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Music-halfnote.svg', division: '1/2', value: beatms * 2 },
+            {notation: 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Music-wholenote.svg', division: '1/1', value: beatms * 4 },
+            {notation: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/Music-doublewholenote.svg', division: '2/1', value: beatms * 8 },
+            {notation: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Music-quadwholenote.svg', division: '4/1', value: beatms * 16 },
         ];
         dotted = [
             {notation: '1/64.' , division: '1/64.', value: beatms / 16 * 1.5},
@@ -36,7 +37,7 @@
         ];
         triplets = [
             {notation: '1/64t' , division: '1/64t', value: beatms / 16 * 2/3},
-            {notation: '1/32t' , divison: '1/32t', value: beatms / 8 * 2/3},
+            {notation: '1/32t' , division: '1/32t', value: beatms / 8 * 2/3},
             {notation: '1/16t' , division: '1/16t', value: beatms / 4 * 2/3},
             {notation: '1/8t' , division: '1/8t' , value: beatms / 2 * 2/3},
             {notation: '1/4t' , division: '1/4t' , value: beatms * 1 * 2/3},
@@ -62,17 +63,19 @@
         <summary>
             <h3>Grid</h3>
         </summary>
-        <div class="grid-container">
+        <div class="delay-container">
             <ul>
                 {#each grids as grid}
                 <li>
+                    <!--
                     <div>
                         <img src={grid.notation}/>
                     </div>
-                    <div>
+                    -->
+                    <div class="division">
                         {grid.division}
                     </div>
-                    <div>
+                    <div class="time">
                         {formatValue(grid.value)}
                     </div>
     
@@ -85,17 +88,19 @@
         <summary>
             <h3>Dotted</h3>
         </summary>
-        <div class="grid-container">
+        <div class="delay-container">
             <ul>
                 {#each dotted as dot}
                 <li>
+                    <!--
                     <div>
                         <img src={dot.notation}/>
                     </div>
-                    <div>
-                        
+                    -->
+                    <div class="division">
+                        {dot.division}
                     </div>
-                    <div>
+                    <div class="time">
                         {formatValue(dot.value)}
                     </div>
     
@@ -109,17 +114,19 @@
         <summary>
             <h3>Triplet</h3>
         </summary>
-        <div class="grid-container">
+        <div class="delay-container">
             <ul>
                 {#each triplets as triplet}
                 <li>
+                    <!--
                     <div>
                         <img src={triplet.notation}/>
                     </div>
-                    <div>
-                        
+                -->
+                    <div class="division">
+                        {triplet.division}
                     </div>
-                    <div>
+                    <div class="time">
                         {formatValue(triplet.value)}
                     </div>
     
