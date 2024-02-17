@@ -28,8 +28,8 @@
             {#each data as row}
                 <tr>
                     <td>{row.note}<sub>1</sub></td>
-                    <td>{row.freq}<span class="table-units">Hz</span></td>
-                    <td>{row.time}<span class="table-units">ms</span></td>
+                    <td>{row.freq} <text class="table-units">Hz</text> </td>
+                    <td>{row.time} <text class="table-units">ms</text> </td>
                 </tr>
             {/each}
         </tbody>

@@ -132,7 +132,7 @@ const FREQTABLE = [
                     {row.note}<sub>{Math.floor(index / 12)}</sub>
                 </td>
                 <td>
-                    {row.freq}<span class="table-units">Hz</span>
+                    {row.freq} <text class="table-units">Hz</text>
                 </td>
                 <td>{row.range}</td>
             </tr>

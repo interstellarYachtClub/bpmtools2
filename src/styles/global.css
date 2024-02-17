@@ -201,3 +201,12 @@ hr {
 		text-align: center;
 	  }
 }
+
+.subbass-compression table tbody,
+.note-frequencies table td {
+ text-align: center;
+}
+
+text.table-units {
+	font-size: .75rem;
+}
