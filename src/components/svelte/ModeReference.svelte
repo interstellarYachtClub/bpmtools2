@@ -42,9 +42,11 @@ function handleChangeRoot() {
 }
 
 function highlightKey(thiskey){
-    //console.log('highlighting!');
-    if(thiskey > 11) {
+    if(thiskey > 11 && thiskey < 24) {
         thiskey = thiskey - 12;
+    }
+    else if(thiskey > 23){
+        thiskey = thiskey - 24;
     }
     let keyId = `proll${thiskey}`;
     let keyElement = document.getElementById(keyId);
