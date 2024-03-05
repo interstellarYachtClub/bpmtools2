@@ -80,7 +80,7 @@ function getChordType(notationchars) {
     }
 
     //match for minor chord type with uppercase chord notation
-    else if (notationchars.match(/(?!dim)[a-z]/)) {
+    else if (notationchars.match(/^[iv]/)) {
         return CHORDTYPE.find(chord => chord.name === 'minor');
     }
 
