@@ -110,7 +110,7 @@ body .all-modules details {
 }
 .web details[open]::after {
   content: '\2212';
-  right: 1rem;
+  right: 1.5rem;
 }
 
 .web details {
@@ -126,14 +126,14 @@ body .all-modules details {
 
 .web details[open] {
   box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
-  margin: 1rem;
-  padding: 1rem;
+  margin: 1rem .5rem;
+  padding: 1rem .5rem;
 }
 
 .web details summary {
   box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
-  margin: 1rem;
-  padding: 1rem;
+  margin: 1rem .5rem;
+  padding: 1rem .5rem;
 }
 
 
