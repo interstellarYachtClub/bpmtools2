@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+.web {
+  --text: #222939;
+  --accent: #2337FF;
+}
+
 .ableish {
     --background: #6e6e6e;
     --interior: #878787;
@@ -81,6 +86,56 @@ main select, main input {
     font-weight: 500;
     color: var(--select);
 }
+
+body .all-modules details {
+  position: relative;
+  margin: 0 0 4rem;
+}
+/* DEFAULT WEB T H E M E*/
+.web .all-modules {
+  border: 0px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.web details::after {
+    content: '\002B';
+    font-size: 2rem;
+    color: var(--accent);
+    margin-left: 1rem;
+    position: absolute;
+    top: -.5rem;
+    right: 2rem;
+}
+.web details[open]::after {
+  content: '\2212';
+  right: 1rem;
+}
+
+.web details {
+  border-bottom: solid 1px var(--text);
+  padding: 0 0 1rem;
+}
+
+.web details[open] summary {
+  box-shadow: none;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.web details[open] {
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.web details summary {
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  margin: 1rem;
+  padding: 1rem;
+}
+
 
 /* LOGIKAL T H E M E */
 .logikal summary {
